@@ -1,0 +1,403 @@
+@import 'config';
+@import 'menu';
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  @include home-bg-image;
+  @include about-bg-image;
+  @include work-bg-image;
+  @include passion-bg-image;
+  @include contact-bg-image;
+  background: $primary-color;
+  color: white;
+  height: 100%;
+  margin: 0;
+  font-family: 'Courier new', Courier, monospace;
+  //font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+h1,h2,h3 {
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Courier', serif, monospace;
+
+  &.lg-heading {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    color: rgba(lighten($primary-color, 45), 0.8);
+    text-align: center;
+  }
+}
+h2{
+  color:rgb(192, 211, 216);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+  @include ease-out;
+  &:hover{
+      font-size: 4.5rem;
+      color: lighten($secondary-color, 15);
+  }
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+
+  .icons {
+    margin-top: 1rem;
+    text-align: center;
+
+    a {
+      padding: 0.4rem;
+      @include ease-out;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+
+}
+
+//About me
+.about-info {
+  border: solid $primary-color 3px;
+  height: 100%;
+  padding: 2vw;
+  display: grid;
+  grid-gap: 3vw;
+  grid-template-areas:
+    'bioImg bio bio'
+    'job1 job2 job3';
+  grid-template-columns: 1fr 1fr 1fr;
+
+
+
+  .bio-fig{
+    grid-area:bioImg;
+    text-align: center;
+  }
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+  .greetings{
+    display: none;
+    overflow: hidden;
+    width: 21rem;
+    height: 2.2rem;
+    background-color: $secondary-color;
+    font-size: 1.5rem;
+    position: relative;
+    top:-5vh;
+    left:12vw;
+  }
+  .bio-fig:hover{
+    .greetings{
+      display: block;
+      @include animation;
+    }
+  }
+  
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+    .text-secondary:hover{
+      font-size: 3rem;
+
+    }
+  }
+
+  .job-1 {
+    grid-area: job1;
+    &:hover{
+      background-color: lighten($primary-color, 10);
+      h3{
+        color: rgb(165, 194, 204);;
+      }
+      h5{
+        color: lighten($secondary-color,20);
+      }
+      @include ease-out;
+    }
+  }
+
+  .job-2 {
+    grid-area: job2;
+    &:hover{
+      background-color: lighten($primary-color, 10);
+      @include ease-out;
+      h3{
+        color: rgb(165, 194, 204);;
+      }
+      h5{
+        color: lighten($secondary-color,20);
+      }
+    }
+  }
+
+  .job-3 {
+    grid-area: job3;
+    &:hover{
+      background-color: lighten($primary-color, 10);
+      @include ease-out;
+      h3{
+        color: rgb(165, 194, 204);;
+      }
+      h5{
+        color: lighten($secondary-color,20);
+      }
+    }
+  }
+
+
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 4px solid;
+  }
+}
+
+// Project page
+.projects {
+  display: grid;
+  border: solid $primary-color 3px;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 8vw;
+  grid-gap: 1rem;
+  grid-template-areas:
+  'item1 item1 item1 item1 intro1 intro1 intro1'
+  'intro2 intro2 intro2 item2 item2 item2 item2'
+  'item3 item3 item3 item3 intro3 intro3 intro3'
+  'intro4 intro4 intro4 item4 item4 item4 item4';
+  
+  .item1{
+    grid-area: item1;
+    text-align: left;
+  }
+  .item2{
+    grid-area: item2;
+    text-align: right;
+  }
+  .item3{
+    grid-area: item3;
+    text-align: left;
+  }
+  .item4{
+    grid-area: item4;
+    text-align: right;
+  }
+  .intro1{
+    grid-area:  intro1;
+    text-align: left;
+  }
+  .intro2{
+    grid-area:  intro2;
+    text-align: right;
+  }
+  .intro3{
+    grid-area:  intro3;
+    text-align: left;
+  }
+  .intro4{
+    grid-area:  intro4;
+    text-align: right;
+  }
+
+  img {
+    width: 100%;
+    max-height:50vh ;
+    opacity: 0.4;
+    position: relative;
+    border: 2px lighten($primary-color,20) solid;
+    border-radius: 0.5rem;
+
+    &:hover {
+      opacity: 1;
+      border-color: $secondary-color;
+      @include ease-out;
+    }
+  }
+
+  .intro{
+    h2{
+      color: darken($secondary-color,30);
+      &:hover{
+        color: $secondary-color;
+      }
+    }
+    h3{
+      color: darken(white, 30);
+    }
+    .lang{
+      color: darken(white,30);
+      font-style: italic;
+    }
+  }
+
+}
+
+// Button Styles
+.btn-dark {
+  background: darken($primary-color, 5);
+  color: white;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  margin-bottom: 5rem;
+  border-radius: 0.5rem;
+  &:hover {
+    background: darken($secondary-color,25);
+    color: #222;
+    @include ease-out;
+  }
+}
+
+.btn-light {
+  background: lighten($primary-color, 40);
+  color: #222;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  border-radius: 0.5rem;
+  &:hover {
+    background: darken($secondary-color,25);
+    color:ivory;
+    @include ease-out;
+  }
+}
+
+// Contact Page
+.contacts{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  .form{
+    margin:4rem 0;
+    opacity: 0.7;
+    background-color: lighten($primary-color, 50);
+    h2{
+      color:darken(white,10);
+      margin-bottom: 1rem;
+      padding:3rem;
+    }
+    .flexform{
+      padding: 0 5vw;
+    }
+    label{
+      color: white;
+      font-weight: bold;
+      font-size: large;
+      opacity: 1;
+    }
+    input{
+      border:none;
+      background-color: lighten($primary-color, 50);
+      border-bottom: 2px solid white;
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+      width: 100%;
+      &:focus{
+        border: 2px solid white;
+      }
+    }
+    textarea{
+      padding: 1rem;
+      border: none;
+      border-bottom:2px solid white;
+      background-color:lighten($primary-color, 50);
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .submitbutton{
+      padding: 1rem;
+      border:3px solid $secondary-color;
+      border-radius: 1rem;
+      font-weight: bold;
+
+      &:hover{
+        background-color: $secondary-color;
+      }
+    }
+
+  }
+  .boxes {
+    margin:4rem 0;
+    background-color: darken($primary-color, 10);
+    opacity: 0.7;
+    h2{
+      padding:3rem;
+      color:darken(white,10);
+      margin-bottom: 1rem;
+    }
+    .text-secondary:hover{
+      font-size: 2rem;
+    }
+    div {
+      font-size: 1.5rem;
+      padding: 1.5rem 5vw;
+      margin-bottom: 2rem;
+      @include ease-out;
+
+      &:hover {
+        background: $secondary-color;
+        color: #222;
+        span {
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
+
+
+#footer {
+  opacity: 0.95;
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 5);
+  color: whitesmoke;
+  height: 110px;
+  & a:hover{
+    color: $secondary-color;
+  }
+}
+@import 'responsive';

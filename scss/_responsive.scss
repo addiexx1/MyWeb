@@ -1,0 +1,131 @@
+// 1171 px and larger
+@include mediaXl {
+  .projects {
+    grid-template-areas:
+    'item1 item1 item1 item1 intro1 intro1 intro1'
+    'intro2 intro2 intro2 item2 item2 item2 item2'
+    'item3 item3 item3 item3 intro3 intro3 intro3'
+    'intro4 intro4 intro4 item4 item4 item4 item4';
+  }
+}
+
+// 769-1170 px
+@include mediaLg {
+  .about-info{
+    .greetings{
+       width: 19rem;
+       left:5.5vw;
+    }
+    .bio-fig:hover{
+     .greetings{
+       display: block;
+       @include animation2;
+      }
+    }
+  }
+  .contacts{
+    grid-template-columns: repeat(1,1fr);
+
+  }
+}
+
+// 768 px and less
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul.menu-nav, div.menu-photo {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-photo {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      background: url('../img/portrait-sm-mobile.jpg');
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .about-info {
+    grid-template-areas:
+      'bioImg'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+
+    grid-template-columns: 1fr;
+    .greetings{
+      width: auto;
+      position: static;
+      text-align: center;
+    }
+  }
+  .contacts{
+    grid-template-columns: 1fr;
+  }
+
+
+  .projects {
+    width: 100%;
+    height:100%;
+    grid-template-areas:
+    'intro1'
+    'item1'
+    'intro2'
+    'item2'
+    'intro3'
+    'item3'
+    'intro4'
+    'item4';
+    
+    .btn-dark{
+      margin-bottom: 0.5rem;
+
+    }
+  }
+}
+
+// 479 px and less
+@include mediaSm {
+  main {
+    padding: 2rem;
+    #home h1 {
+      margin-top: 10vh;
+    }
+
+    .lg-heading {
+      margin-top:1rem;
+      font-size: 4rem;
+    }
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .contacts{
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
