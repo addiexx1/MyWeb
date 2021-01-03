@@ -1,6 +1,10 @@
 # Build a Portfolio
   Hello World!
-  I have built a responsive personal website using SCSS JavaScript HTML5 that has 5 pages include Home, About, Work, Passion and Contact.
+  I have built a responsive personal website using	
+  	SCSS
+ 	JAVASCRIPT
+  	HTML5
+  that has 5 pages include Home, About, Work, Passion and Contact.
 		
   https://addiexx1.github.io/MyWeb/
 
