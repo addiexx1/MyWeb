@@ -136,7 +136,7 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     .text-secondary:hover{
       font-size: 3rem;
 
@@ -145,52 +145,33 @@ main {
 
   .job-1 {
     grid-area: job1;
-    &:hover{
-      background-color: lighten($primary-color, 10);
-      h3{
-        color: rgb(165, 194, 204);;
-      }
-      h5{
-        color: lighten($secondary-color,20);
-      }
-      @include ease-out;
-    }
   }
 
   .job-2 {
     grid-area: job2;
-    &:hover{
-      background-color: lighten($primary-color, 10);
-      @include ease-out;
-      h3{
-        color: rgb(165, 194, 204);;
-      }
-      h5{
-        color: lighten($secondary-color,20);
-      }
-    }
   }
 
   .job-3 {
     grid-area: job3;
-    &:hover{
-      background-color: lighten($primary-color, 10);
-      @include ease-out;
-      h3{
-        color: rgb(165, 194, 204);;
-      }
-      h5{
-        color: lighten($secondary-color,20);
-      }
-    }
   }
 
 
 
   .job {
-    background: lighten($primary-color, 5);
+    background-color: lighten($primary-color, 5);
+    box-shadow: 0rem 0rem 0.5rem lighten($secondary-color, 15);
     padding: 0.5rem;
     border-bottom: $secondary-color 4px solid;
+    &:hover{
+      background-color: lighten($primary-color, 10);
+      @include ease-out;
+      h3{
+        color: rgb(165, 194, 204);;
+      }
+      h5{
+        color: lighten($secondary-color,20);
+      }
+    }
   }
 }
 
@@ -248,10 +229,12 @@ main {
     position: relative;
     border: 2px lighten($primary-color,20) solid;
     border-radius: 0.5rem;
+    box-shadow: 0 0 1rem  rgb(99, 99, 99);
 
     &:hover {
       opacity: 1;
       border-color: $secondary-color;
+      box-shadow:  0 0 1rem  rgb(99, 99, 99);;
       @include ease-out;
     }
   }
@@ -277,6 +260,7 @@ main {
 // Button Styles
 .btn-dark {
   background: darken($primary-color, 5);
+  box-shadow: 0 0 0.5rem  rgba(91, 145, 155, 0.5);
   color: white;
   display: block;
   padding: 0.5rem 1.5rem;
@@ -284,7 +268,7 @@ main {
   margin-bottom: 5rem;
   border-radius: 0.5rem;
   &:hover {
-    background: darken($secondary-color,25);
+    background: darken($secondary-color,15);
     color: #222;
     @include ease-out;
   }
@@ -292,6 +276,7 @@ main {
 
 .btn-light {
   background: lighten($primary-color, 40);
+  box-shadow: 0 0 0.5rem  rgba(91, 145, 155, 0.5);
   color: #222;
   display: block;
   padding: 0.5rem 1.5rem;
@@ -299,7 +284,7 @@ main {
   margin-bottom: 0.3rem;
   border-radius: 0.5rem;
   &:hover {
-    background: darken($secondary-color,25);
+    background: darken($secondary-color,15);
     color:ivory;
     @include ease-out;
   }

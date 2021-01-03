@@ -425,7 +425,7 @@ main .icons a:hover {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: bio;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .about-info .bio .text-secondary:hover {
@@ -438,38 +438,10 @@ main .icons a:hover {
   grid-area: job1;
 }
 
-.about-info .job-1:hover {
-  background-color: #324153;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-.about-info .job-1:hover h3 {
-  color: #a5c2cc;
-}
-
-.about-info .job-1:hover h5 {
-  color: #cafefa;
-}
-
 .about-info .job-2 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: job2;
-}
-
-.about-info .job-2:hover {
-  background-color: #324153;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-.about-info .job-2:hover h3 {
-  color: #a5c2cc;
-}
-
-.about-info .job-2:hover h5 {
-  color: #cafefa;
 }
 
 .about-info .job-3 {
@@ -478,24 +450,26 @@ main .icons a:hover {
   grid-area: job3;
 }
 
-.about-info .job-3:hover {
+.about-info .job {
+  background-color: #293443;
+  -webkit-box-shadow: 0rem 0rem 0.5rem #b1fdf8;
+          box-shadow: 0rem 0rem 0.5rem #b1fdf8;
+  padding: 0.5rem;
+  border-bottom: #66fcf1 4px solid;
+}
+
+.about-info .job:hover {
   background-color: #324153;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
-.about-info .job-3:hover h3 {
+.about-info .job:hover h3 {
   color: #a5c2cc;
 }
 
-.about-info .job-3:hover h5 {
+.about-info .job:hover h5 {
   color: #cafefa;
-}
-
-.about-info .job {
-  background: #293443;
-  padding: 0.5rem;
-  border-bottom: #66fcf1 4px solid;
 }
 
 .projects {
@@ -582,11 +556,15 @@ main .icons a:hover {
   position: relative;
   border: 2px #465a72 solid;
   border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 1rem #636363;
+          box-shadow: 0 0 1rem #636363;
 }
 
 .projects img:hover {
   opacity: 1;
   border-color: #66fcf1;
+  -webkit-box-shadow: 0 0 1rem #636363;
+          box-shadow: 0 0 1rem #636363;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -610,6 +588,8 @@ main .icons a:hover {
 
 .btn-dark {
   background: #151c23;
+  -webkit-box-shadow: 0 0 0.5rem rgba(91, 145, 155, 0.5);
+          box-shadow: 0 0 0.5rem rgba(91, 145, 155, 0.5);
   color: white;
   display: block;
   padding: 0.5rem 1.5rem;
@@ -619,7 +599,7 @@ main .icons a:hover {
 }
 
 .btn-dark:hover {
-  background: #04dece;
+  background: #1bfbea;
   color: #222;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
@@ -627,6 +607,8 @@ main .icons a:hover {
 
 .btn-light {
   background: #748caa;
+  -webkit-box-shadow: 0 0 0.5rem rgba(91, 145, 155, 0.5);
+          box-shadow: 0 0 0.5rem rgba(91, 145, 155, 0.5);
   color: #222;
   display: block;
   padding: 0.5rem 1.5rem;
@@ -636,7 +618,7 @@ main .icons a:hover {
 }
 
 .btn-light:hover {
-  background: #04dece;
+  background: #1bfbea;
   color: ivory;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
