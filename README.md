@@ -6,7 +6,7 @@
   	HTML5
   that has 5 pages include Home, About, Work, Passion and Contact.
   
-  ![ScreenShot](homepage.png)
+  ![ScreenShot](img/homepage.png)
 		
   https://addiexx1.github.io/MyWeb/
 
