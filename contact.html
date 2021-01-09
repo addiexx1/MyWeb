@@ -31,11 +31,6 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">
-            About
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="work.html" class="nav-link">
             Work
           </a>
@@ -43,6 +38,11 @@
         <li class="nav-item">
           <a href="passion.html" class="nav-link">
             Passion
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">
+            About
           </a>
         </li>
         <li class="nav-item current">
@@ -80,29 +80,31 @@
           <span class="text-secondary">Address: </span> 2308 Centre St NE, Calgary, AB, Canada, T2E2T7
         </div>
       </div>
-      <div class="form">
+
+      <form class="form" id = "myForm" action="form.php" method="POST">
         <h2>I like to create things with fun, open-minded people. Let's Get Connected </h2>
+        <div id = "submitMessage"></div>
         <div class="flexform">
-          <label>First Name </label><input type="text" id="fname" name="firstname" placeholder="Fisrt name goes here">
+          <label>First Name </label><input type="text" id="fname" name="first_tname" placeholder="Fisrt name goes here">
         </div>
 
         <div class="flexform">
           <label>Last Name </label>
-          <input type="text" id="lname" name="lastname" placeholder="Last name goes here">
+          <input type="text" id="lname" name="last_name" placeholder="Last name goes here">
         </div>
 
         <div class="flexform">
           <label>City Name </label>
-          <input type="text" id="city" name="mail" placeholder="City name goes here">
+          <input type="text" id="city" name="city" placeholder="City name goes here">
         </div>
 
         <div class="flexform">
           <label>Email Address</label>
-          <input type="email" id="emailadd" name="mail" placeholder="Email goes here">
+          <input type="email" id="email" name="email" placeholder="Email goes here" required>
         </div>
         <div class="flexform">
           <label>Phone Number</label>
-          <input type="text" placeholder="Phone number goes here">
+          <input type="text" id="phone" placeholder="Phone number goes here">
         </div>
         <div class="flexform">
           <label>Tell Me What You Think</label>
@@ -113,7 +115,7 @@
           <input class="submitbutton" type="Submit"></input>
         </div>
 
-      </div>
+      </form>
     </div>
   </main>
 

@@ -23,6 +23,16 @@
       }
     }
   }
+  .travel, .sports, .movies, .speech{
+    grid-template-columns: repeat(2,1fr);
+    margin: 3rem 1.5rem 6rem 1.5rem;
+  }
+
+  #passion{
+    video, img, iframe{
+      height: 300px;
+    }
+  }
   .contacts{
     grid-template-columns: repeat(1,1fr);
 
@@ -81,6 +91,20 @@
       width: auto;
       position: static;
       text-align: center;
+    }
+  }
+  .travel, .sports, .movies, .speech{
+    grid-template-columns: repeat(1,1fr);
+    margin: 3rem 1.5rem 6rem 1.5rem;
+  }
+  .passions{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #passion{
+    video, img, iframe{
+      height: 250px;
     }
   }
   .contacts{

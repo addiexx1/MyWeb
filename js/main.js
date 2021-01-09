@@ -32,4 +32,27 @@ function toggleMenu() {
   }
 }
 
+//submit the form
+const myForm = document.getElementById('myForm');
+myForm.addEventListener("submit",(e) => {
+  e.preventDefault();
+  const submitMessage = document.getElementById('submitMessage');
+  const fname = document.querySelector('#fname').value;
+  submitMessage.appendChild(document.createTextNode(`Thank you ${fname}, the form has been submitted!`));
+  document.querySelector("#fname").value = "";
+  document.querySelector("#lname").value = "";
+  document.querySelector("#city").value = "";
+  document.querySelector("#email").value = "";
+  document.querySelector("#phone").value = "";
+  document.querySelector("#message").value = "";
+  const request = new XMLHttpRequest();
+  request.open('post','form.php');
+  request.onload = function(){
+    console.log(request.responseText);
+  }
+  request.send(new FormData(myForm));
+
+} )
+
+
 
