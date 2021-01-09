@@ -20,5 +20,6 @@
 * css folder
 * scss folder
 * js folder
+* php file
 * img folder
 * video folder
